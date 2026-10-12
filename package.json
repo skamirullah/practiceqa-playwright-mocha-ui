@@ -1,0 +1,27 @@
+{
+  "name": "practiceqa-playwright-mocha-ui",
+  "version": "1.0.0",
+  "description": "UI automation framework with Playwright and Mocha against SkyWays, the flight booking app on PracticeQAAutomation",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "mocha",
+    "test:smoke": "mocha --grep @smoke",
+    "test:headed": "HEADLESS=false mocha",
+    "test:firefox": "BROWSER=firefox mocha",
+    "test:webkit": "BROWSER=webkit mocha",
+    "test:parallel": "mocha --parallel --jobs 3",
+    "trace": "playwright show-trace",
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@playwright/test": "^1.48.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "mocha": "^10.7.3",
+    "mochawesome": "^7.1.3"
+  }
+}
